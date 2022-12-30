@@ -6,7 +6,7 @@ import connectToDb from './db.js'
 import cors from 'cors';
 
 dotenv.config({ path: './.env' });
-const port = process.env.PORT;
+const port = process.env.PORT|8000;
 
 connectToDb();
 const app = express();
