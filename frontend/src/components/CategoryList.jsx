@@ -16,13 +16,13 @@ function CategoryList(props) {
         <TextField source="name" />
         <EditButton />
         <DeleteButton />
-        <List pagination={false} sx={{maxHeight:'100px',minWidth:'300px',border:'1px solid silver',overflow:'scroll'}} actions={false}>
-          <ArrayField source="books">
+        <ArrayField source="books">
+          <div style={{minWidth:'300px',borderRadius:'10px',border:"1px solid silver",maxHeight:"100px",overflow:'scroll'}}>
             <Datagrid bulkActionButtons={false}>
               <TextField label={false} source="name" />
             </Datagrid>
-          </ArrayField>
-        </List>
+          </div>
+        </ArrayField>
         <DateField source="createdAt" />
       </Datagrid>
     </List>

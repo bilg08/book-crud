@@ -7,6 +7,7 @@ function BookList(props) {
       <Datagrid>
         <TextField source="name" />
         <TextField source="author" />
+        <TextField source='price'/>
         <TextField source="category.name" />
         <EditButton />
         <DeleteButton />
