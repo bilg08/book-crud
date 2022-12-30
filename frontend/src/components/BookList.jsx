@@ -3,7 +3,7 @@ import { List,Datagrid,TextField,DateField,EditButton,DeleteButton} from 'react-
 
 function BookList(props) {
   return (
-    <List {...props}>
+    <List {...props} pagination={false}>
       <Datagrid>
         <TextField source="name" />
         <TextField source="author" />

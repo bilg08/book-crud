@@ -12,7 +12,7 @@ function App() {
       dataProvider={restProvider(
         "http://localhost:8000"
       )}>
-      <Resource name='book' edit={BookEdit} create={BookCreate} list={BookList}/>
+      <Resource  name='book' edit={BookEdit} create={BookCreate} list={BookList}/>
       <Resource name='category' create={CreateCategory} edit={EditCategory} list={CategoryList}/>  
     </Admin>
   );

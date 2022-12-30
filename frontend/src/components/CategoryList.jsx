@@ -11,16 +11,18 @@ import {
 
 function CategoryList(props) {
   return (
-    <List {...props} >
+    <List {...props} pagination={false}>
       <Datagrid>
         <TextField source="name" />
         <EditButton />
         <DeleteButton />
-        <ArrayField  source="books">
-          <Datagrid bulkActionButtons={false}>
-            <TextField label={false} source="name" />
-          </Datagrid>
-        </ArrayField>
+        <List pagination={false} sx={{maxHeight:'100px',minWidth:'300px',border:'1px solid silver',overflow:'scroll'}} actions={false}>
+          <ArrayField source="books">
+            <Datagrid bulkActionButtons={false}>
+              <TextField label={false} source="name" />
+            </Datagrid>
+          </ArrayField>
+        </List>
         <DateField source="createdAt" />
       </Datagrid>
     </List>
